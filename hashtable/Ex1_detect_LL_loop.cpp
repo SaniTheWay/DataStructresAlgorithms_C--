@@ -1,7 +1,7 @@
 // Question : Check if a LL is Looped/Cyclic or not
 // Question Link : https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/
 
-// Approach: HashMap
+// Approach: HashMap(UNORDERED MAPS)
 // status : Solved (https://practice.geeksforgeeks.org/problems/detect-loop-in-linked-list/1#)
 
 #include <iostream>
