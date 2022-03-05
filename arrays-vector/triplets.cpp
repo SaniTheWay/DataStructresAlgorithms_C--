@@ -5,7 +5,7 @@
 // should also be in ascending order too.Return empty array of not possible.
 
 // Question Link : https://www.geeksforgeeks.org/find-a-triplet-that-sum-to-a-given-value/
-// Approach: _____
+// Approach: Two Pointers (with pairsum())
 // status : https://leetcode.com/problems/3sum/
 
 #include <iostream>
