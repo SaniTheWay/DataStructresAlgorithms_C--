@@ -1,5 +1,6 @@
 // Question : Pair Sum Probelm - finding all pairs of sum k
-// Question Link : https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
+// Question Link : https://leetcode.com/problems/two-sum/
+// https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-check-for-pair-in-a-with-sum-as-x/
 // Approach: 1. Brute Force,
 //           2. Sorting+2Pointer,
 //           3. Sorting+BinarySearch,
