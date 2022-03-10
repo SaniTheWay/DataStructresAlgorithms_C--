@@ -1,10 +1,10 @@
 // Question : Highest Mountain(or Mountain)
 // Question Link :
 //          > https://www.geeksforgeeks.org/longest-mountain-subarray/
-//          > https://leetcode.com/problems/longest-mountain-in-array/
+//          >
 
-// Approach: _____
-// status : _____
+// Approach: Two pointer Type
+// status : RTE https://leetcode.com/problems/longest-mountain-in-array/
 
 #include <iostream>
 #include <vector>
@@ -12,50 +12,45 @@ using namespace std;
 
 // Efficient Algorithm
 
-int CODE(vector<int> V)
+int longestMountain(vector<int> &V)
 {
     int n = V.size(), mx = 0;
-    if (n >= 3)
+    for (int i = 1; i <= n - 2;)
     {
-        for (int i = 1; i <= n - 2;)
+        // finding peek
+        if (V[i - 1] < V[i] and V[i] > V[i + 1])
         {
-            // finding peek
-            if (V[i - 1] < V[i] && V[i] > V[i + 1])
-            {
-                int left = i;
-                int cnt = 1;
-                // int right = i+1
+            int left = i;
+            int cnt = 1;
+            // int right = i+1
 
-                // cnt left elements till the lowest point
-                while (V[left] > V[left - 1] && left >= 1)
-                {
-                    cnt++;
-                    left--;
-                }
-                // cnt right elements till the lowest point
-                while (i <= n - 2 && V[i] > V[i + 1])
-                {
-                    i++;
-                    cnt++;
-                    // right++;
-                }
-                mx = max(mx, cnt);
+            // cnt left elements till the lowest point
+            while (V[left] > V[left - 1] && left >= 1)
+            {
+                cnt++;
+                left--;
             }
-            else
+            // cnt right elements till the lowest point
+            while (V[i] > V[i + 1])
             {
                 i++;
+                cnt++;
             }
+            mx = max(mx, cnt);
         }
-
-        return mx;
+        else
+        {
+            i++;
+        }
     }
-    return 0;
+
+    return mx;
 }
 
 int main()
 {
     vector<int> V{5, 6, 1, 2, 3, 4, 5, 4, 3, 2, 0, 1, 2, 3, -2, 4};
-    cout << CODE(V);
+    cout << longestMountain(V);
     // Output -
     //  > 9
     return 0;
