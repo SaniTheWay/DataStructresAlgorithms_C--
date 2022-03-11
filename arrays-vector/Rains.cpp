@@ -1,7 +1,7 @@
 // Question : Rains or Trapping Rain Water (HARD)
 // Question Link : https://www.geeksforgeeks.org/trapping-rain-water/
 // Approach: 2 Array Approach with TC O(N)
-// status : _____
+// status : https://leetcode.com/problems/trapping-rain-water/submissions/
 
 #include <iostream>
 #include <vector>
