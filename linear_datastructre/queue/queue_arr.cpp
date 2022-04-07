@@ -9,11 +9,10 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-
-int r = -1;
-int f = -1;
-
-vector<int> my_queue(5, 0);
+// defining globally
+int r = -1;                 // global
+int f = -1;                 // global
+vector<int> my_queue(5, 0); // global
 
 bool is_emp()
 {
@@ -63,6 +62,7 @@ void display_queue(vector<int> &my_queue)
 
 int main()
 {
+    // push
     q_insert(1);
     q_insert(10);
     q_insert(15);
