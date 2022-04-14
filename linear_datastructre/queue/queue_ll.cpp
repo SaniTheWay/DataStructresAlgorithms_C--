@@ -18,10 +18,6 @@ class Queuee : public q_Node
 {
     q_Node *head = NULL;
 
-    // Queuee()
-    // {
-    //     cout<<"Enter value
-    // }
 public:
     bool is_emp()
     {
@@ -77,13 +73,13 @@ public:
     }
     void peek()
     {
-        if(is_emp())
+        if (is_emp())
         {
-            cout<<"Empty Queue!\n";
+            cout << "Empty Queue!\n";
         }
         else
         {
-            cout<<"Peek element: "<<head->data<<endl;
+            cout << "Peek element: " << head->data << endl;
         }
     }
 };
