@@ -29,6 +29,7 @@ int main()
     {
         if(A[0][0] == A[1][1])cout<<"YES";
         else cout<<"NO";
+        return 0;
     }
     for (int i = 0; i < c - 1; i++)
     {
