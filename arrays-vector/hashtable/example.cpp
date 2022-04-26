@@ -8,26 +8,31 @@
 #include <algorithm>
 using namespace std;
 
+// pair<int, int> CODE(vector<int> &A, int k)
+// {
+//     int n = A.size();
+//     sort(A.begin(), A.end());
+//     int l = 0, r = n - 1;
+//     while (l < r)
+//     {
+//         // cout<<A[l] + A[r]<<" || ";
+//         if (A[l] + A[r] == k)
+//             return {l, r};
+//         if (A[l] + A[r] < k)
+//         {
+//             l++;
+//         }
+//         else
+//         {
+//             r--;
+//         }
+//     }
+//     return {};
+// }
+
 pair<int, int> CODE(vector<int> &A, int k)
 {
-    int n = A.size();
-    sort(A.begin(), A.end());
-    int l = 0, r = n - 1;
-    while (l < r)
-    {
-        // cout<<A[l] + A[r]<<" || ";
-        if (A[l] + A[r] == k)
-            return {l, r};
-        if (A[l] + A[r] < k)
-        {
-            l++;
-        }
-        else
-        {
-            r--;
-        }
-    }
-    return {};
+    unordered_set<int> S;
 }
 
 int main()
