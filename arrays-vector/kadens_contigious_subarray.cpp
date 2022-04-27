@@ -18,7 +18,7 @@ int CODE(vector<int> &A)
     for (int i = 0; i < A.size(); i++)
     {
         //{-2, -3, 4, -1, -2, 1, 5, -3}
-
+        SJFIDSHG
         sum += A[i];
         if (sum > max_sum)
             max_sum = sum;
