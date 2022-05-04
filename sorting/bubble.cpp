@@ -1,6 +1,6 @@
 // Question : _____
 // Question Link : _____
-// Approach: TC O(n2) simple || also have a moified one
+// Approach: TC O(n2) simple || also have a modified one
 // status : _____
 
 #include <iostream>
