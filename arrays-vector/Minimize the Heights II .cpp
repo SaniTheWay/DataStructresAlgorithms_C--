@@ -6,56 +6,24 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <cmath
+#include <cmath>
 using namespace std;
 
 int getMinDiff(int A[], int n, int k)
 {
-    // first sort the array
     sort(A, A + n);
-    // finding avg
-    int avg_val = 0;
-    for (int i = 0; i < n; i++)
+    int mx_top = A[n - 1] - A[0];
+    int max_so_far = INT16_MIN;
+    int min_so_far = INT16_MAX;
+
+    for (int i = 1; i < n - 1; i++)
     {
-        cout << A[i] << " ";
+        max_so_far = max(A[n - 1] - k, A[i] + k);
+        min_so_far = min(A[0] + k, A[i - 1] - k);
+        mx_top = min(mx_top, max_so_far - min_so_far);
     }
-    cout << endl;
-    for (int i = 0; i < n; i++)
-    {
-        avg_val += A[i];
-    }
-    avg_val = ceil(avg_val / n);
-    cout << "-" << avg_val << "-" << endl;
-    for (int j = 0; j < n; j++)
-    {
-        if (A[j] == avg_val)
-        {
-            continue;
-        }
-        if (A[j] < avg_val)
-        {
-            A[j] += k;
-            continue;
-        }
-        if (A[j] > avg_val)
-        {
-            if (A[j] - k <= 0)
-            {
-                A[j] += k;
-            }
-            else
-            {
-                A[j] -= k;
-            }
-        }
-    }
-    for (int i = 0; i < n; i++)
-    {
-        cout << A[i] << " ";
-    }
-    cout << endl;
-    sort(A, A + n);
-    return A[n - 1] - A[0];
+
+    return mx_top;
 }
 int main()
 {
