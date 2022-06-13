@@ -1,6 +1,6 @@
 // Question : _____
 // Question Link : _____
-// Approach: modified Approach [O(n)]
+// Approach: modified Approach [ BEST-O(n)]
 // status : _____
 
 #include <iostream>
@@ -19,10 +19,11 @@ int main()
             if (A[j] > A[j + 1])
             {
                 swap(A[j], A[j + 1]);
-                count= 1;
+                count = 1; // if array already sorted i.e. no swaping occured
             }
         }
-        if(!count)break;
+        if (!count)
+            break;
     }
     for (int i = 0; i < n; i++)
     {
